@@ -1,0 +1,63 @@
+.NamesList{
+    background-color: white;
+    width: 25%;
+    min-width: 300px;
+    height: 100%;
+    padding: 15px;
+    padding-right: 0;
+}
+
+.appName{
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+}
+
+.container{
+    /* background-color: red; */
+    padding: 30px 0;
+    height: calc(100% - 30px);
+}
+
+.createNotesButton{
+    background-color: black;
+    color: white;
+    width: 85%;
+    padding: 2px 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: auto;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.plusIcon{
+    font-size: 1.5rem;
+}
+
+.listContainer{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 65px);
+    overflow-y: scroll;
+    /* padding-right: 15px; */
+}
+
+.listContainer::-webkit-scrollbar{
+    width: 0px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.119);
+    border-radius: 20px;
+}
+.listContainer::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom right, #848484b3 0%, #a6a5a598 100%);
+    border-radius: 5px;
+}
