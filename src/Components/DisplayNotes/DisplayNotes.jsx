@@ -4,6 +4,7 @@ import styles from './DisplayNotes.module.css'
 import defaultImage from '../../assets/defaultImage.png'
 import lockImage from '../../assets/lockIcon.svg'
 import enterIcon from '../../assets/enterIcon.svg'
+import goBackIcon from '../../assets/goBackIcon.svg'
 import DisplayName from '../DisplayName/DisplayName'
 
 function DisplayNotes(props) {
@@ -52,7 +53,7 @@ function DisplayNotes(props) {
 
     // for handling submission new note
     const handleSubmit = () => {
-        if(newNote.length===0){
+        if (newNote.length === 0) {
             return
         }
         const time = getTime()
@@ -79,8 +80,13 @@ function DisplayNotes(props) {
         props.setUpdated(props.selected)
     }
 
+    // for going back to name list
+    const handleGoBack=()=>{
+        props.setSelected('')
+    }
+
     return (
-        <div className={styles.NotesDisplay} >
+        <div className={styles.NotesDisplay} style={{ right: props.selected && '0' }}>
             {
                 !props.selected &&
                 <div className={styles.defaultContainer}>
@@ -99,6 +105,7 @@ function DisplayNotes(props) {
                 props.selected &&
                 <div className={styles.notesContainer}>
                     <div className={styles.header} >
+                        <img className={styles.goBackIcon} src={goBackIcon} alt='go back' onClick={handleGoBack} />
                         <DisplayName {...currentGroup} />
                     </div>
                     <div className={styles.notesList}>

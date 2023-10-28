@@ -1,7 +1,9 @@
 .NotesDisplay{
     flex-grow: 1;
-    max-width: 75%;
+    width: 75%;
+    height: 100%;
     background-color: #F7ECDC;
+    position: relative;
 }
 
 /* Default display */
@@ -60,6 +62,7 @@
 /* Header */
 .header{
     background-color: #E8E8E8;
+    display: flex;
 }
 
 /* Display notes */
@@ -134,4 +137,54 @@
     bottom: 30px;
     right: 30px;
     cursor: pointer;
+}
+
+/* go back button */
+.goBackIcon{
+    margin-left: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .NotesDisplay{
+        width: 100%;
+        position: absolute;
+        right: 100%;
+    }
+
+    .goBackIcon{
+        display: block;
+    }
+    .notesList{
+        padding: 0px 10px;
+        margin-right: 4px;
+    }
+    .note{
+        gap: 20px;
+        padding: 10px 0;
+    }
+    .timeAndDate{
+        font-size: 0.7rem;
+    }
+    .noteContent{
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+    .notesInputContainer{
+        padding: 10px;
+    }
+    .notesInput{
+        padding: 10px;
+        border-radius: 6px;
+        height: 100px;
+    }
+    .notesInput::placeholder{
+        font-size: 0.9rem;
+    }
+    .enterImage{
+        width: 20px;
+        bottom: 25px;
+        right: 20px;
+    }
 }

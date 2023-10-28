@@ -61,3 +61,17 @@
     background: linear-gradient(to bottom right, #848484b3 0%, #a6a5a598 100%);
     border-radius: 5px;
 }
+
+
+@media screen and (max-width: 768px){
+    .NamesList{
+        width: 100%;
+        height: 100vh;
+        min-width: none;
+    }
+
+    .createNotesButton{
+        font-size: 1rem;
+        margin-right: auto;
+    }
+}

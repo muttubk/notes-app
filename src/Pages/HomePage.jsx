@@ -20,7 +20,7 @@ function HomePage() {
         <>
             <div className={styles.HomePage} >
                 <NamesList setCreating={setCreating} selected={selected} setSelected={setSelected} updated={updated} />
-                <DisplayNotes selected={selected} setUpdated={setUpdated} />
+                <DisplayNotes selected={selected} setSelected={setSelected} setUpdated={setUpdated} />
             </div>
             {
                 creating &&
