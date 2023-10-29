@@ -64,7 +64,8 @@ function DisplayNotes(props) {
             time: time,
             content: newNote
         }
-        newnotesList.unshift(newernote)
+        // newnotesList.unshift(newernote)
+        newnotesList.push(newernote)
 
         setOldNotes(newnotesList)
         setNewNote('')

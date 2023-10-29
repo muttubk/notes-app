@@ -71,7 +71,8 @@
     padding: 15px 35px;
     overflow-y: auto;
     display: flex;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
     margin-right: 4px;
 }
 .notesList::-webkit-scrollbar{
