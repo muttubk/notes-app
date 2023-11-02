@@ -36,9 +36,8 @@ function CreateNewNotes(props) {
             }
             groupsList.unshift(newGroup)
             localStorage.setItem('Notes', JSON.stringify(groupsList))
-            console.log(groupsList)
-            // for selecting the created group immediately
-            props.setSelected(newGroup.id)
+            // for resetting selected notes group
+            props.setSelected('')
         }
         else {
             setError(true)
