@@ -38,6 +38,7 @@ function DisplayNotes(props) {
         const minute = time.getMinutes()
         const ampm = hour < 12 ? 'AM' : 'PM'
         hour = hour === 0 ? '12' : hour > 12 ? hour % 12 : hour
+        hour = hour < 10 ? '0' + hour : hour
         return hour + ":" + minute + " " + ampm
     }
     // for getting current date
