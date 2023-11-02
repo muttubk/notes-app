@@ -45,8 +45,8 @@ function CreateNewNotes(props) {
         }
     }
     return (
-        <div className={styles.backCover}>
-            <div className={styles.createNotesPopup}>
+        <div className={styles.backCover} onClick={()=>{props.setCreating(false)}}>
+            <div className={styles.createNotesPopup} onClick={(e)=>e.stopPropagation()}>
                 <p className={styles.text}>Create New Notes group</p>
                 <div className={styles.groupName}>
                     <p>Group Name</p>

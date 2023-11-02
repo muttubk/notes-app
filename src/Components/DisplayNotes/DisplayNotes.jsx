@@ -53,7 +53,7 @@ function DisplayNotes(props) {
 
     // for handling submission new note
     const handleSubmit = () => {
-        if (newNote.length === 0) {
+        if (newNote.trim().length === 0) {
             return
         }
         const time = getTime()
@@ -82,7 +82,7 @@ function DisplayNotes(props) {
     }
 
     // for going back to name list
-    const handleGoBack=()=>{
+    const handleGoBack = () => {
         props.setSelected('')
     }
 
@@ -133,6 +133,7 @@ function DisplayNotes(props) {
                         <textarea className={styles.notesInput}
                             value={newNote}
                             onChange={handleInput}
+                            onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { handleSubmit(); e.preventDefault() } }}
                             name="" id="" cols="30" rows="10" placeholder='Enter your text here...........'></textarea>
                         <img src={enterIcon} className={styles.enterImage} alt="" onClick={handleSubmit} />
                     </div>
